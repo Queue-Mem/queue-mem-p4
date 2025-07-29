@@ -1,4 +1,11 @@
-# Queue-Mem-P4
+# Queue-Mem
+
+General-purpose CPU servers have been widely used to deploy Network Functions thanks to their high flexibility and simplicity of deployment. Due to their high energy consumption, best practices advocate for only processing packet headers on CPU cores while temporary storing the corresponding packet payloads on either network interface cards or external RDMA-enabled memory.
+
+The seemingly minor decision of where to store a packet payload greatly impacts overall energy consumption in state-of-the-art NF systems operating at terabit-per-second speeds. In fact, we show that if one could ideally store packet payloads on today's hardware switches, while processing headers externally, one could reduce energy use by 2.4x to 9.2x compared to current practices.
+
+Queue-Mem is a general-purpose, energy-efficient storage solution to enhance NF deployment that carefully exploits the buffer queues of existing programmable switches, making it capable of handling terabit-per-second speeds and supporting advanced per-flow network functions, all while using just a single commodity server connected to an ASIC switch.
+
 This repository contains the P4 implementation of Queue-Mem for Intel Tofino 2. 
 
 This implementation is tested with **SDE 9.11.1**.
